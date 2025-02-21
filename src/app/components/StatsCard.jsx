@@ -6,10 +6,7 @@ import {
   LineChart,
   Line,
   XAxis,
-  YAxis,
-  CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
   PieChart,
   Pie,
@@ -260,9 +257,9 @@ const StatsCard = () => {
             <div className="mt-5 lg:mt-0">
               <button
                 onClick={handleUpdateClick}
-                className="capitalize font-semibold py-2 px-7 text-lg rounded-xl text-white bg-blue-900 border-2 border-black lg:text-sm"
+                className="capitalize font-semibold py-2 px-7 text-lg rounded-xl text-white bg-blue-900 border-1 border-black lg:text-sm"
               >
-                update
+                Update
               </button>
             </div>
           </div>
@@ -341,7 +338,7 @@ const StatsCard = () => {
           {/* Comparision Graph */}
           <div className="w-full h-full mt-5 border rounded-md p-5 lg:w-[45vw] lg:h-auto ">
             <div className="mt-5 lg:mt-0">
-              <h2 className="text-lg font-bold capitalize">Comparison garph</h2>
+              <h2 className="text-lg font-bold capitalize">Comparison Graph</h2>
             </div>
             <div className="flex justify-between mt-5">
               <div className="w-5/6">
@@ -349,8 +346,8 @@ const StatsCard = () => {
                   <span className="text-gray-600 font-bold">
                   You scored {quickStatistics.quickStatistics2.percentile}% percentile
                   </span> which is
-                  lower than the <br />  average Percentile 72% of all the
-                  enginners who took the assessment
+                  lower than the <br />  average percentile 72% of all the
+                  engineers who took the Assessment.
                 </p>
               </div>
               <div className="border  overflow-hidden rounded-full w-12 h-12 lg:w-10 lg:h-10 xl:w-16 xl:h-16">
@@ -518,7 +515,7 @@ const StatsCard = () => {
                     htmlFor="rank"
                     className="block font-medium mb-1 capitalize"
                   >
-                    update your <span className="font-bold">Rank</span>
+                    Update your <span className="font-bold">Rank</span>
                   </label>
                 </div>
                 <input
@@ -555,7 +552,7 @@ const StatsCard = () => {
                     htmlFor="percentile"
                     className="block font-medium capitalize mb-1"
                   >
-                    update your <span className="font-bold">Percentile</span>
+                    Update your <span className="font-bold">Percentile</span>
                   </label>
                 </div>
                 <input
@@ -632,13 +629,13 @@ const StatsCard = () => {
                 onClick={handleCloseForm}
                 className="px-4 py-2 border border-blue-950 text-blue-950 font-medium rounded-md hover:bg-gray-100"
               >
-                cancel
+                Cancel
               </button>
               <button
                 onClick={handleSave}
                 className="flex items-center justify-center gap-1 w-28 font-semibold px-4 py-2 rounded-xl text-white bg-blue-900 border-2 border-black "
               >
-                save
+                Save
                 <IoIosArrowRoundForward size={25}  />
               </button>
             </div>

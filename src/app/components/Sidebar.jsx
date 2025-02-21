@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { MdOutlineBarChart } from "react-icons/md";
 import { TfiMedall } from "react-icons/tfi";
 import { IoDocumentOutline } from "react-icons/io5";
-import { CiMenuBurger } from "react-icons/ci";
 import { IoIosClose } from "react-icons/io";
 import { CiMenuKebab } from "react-icons/ci";
 const Sidebar = () => {
