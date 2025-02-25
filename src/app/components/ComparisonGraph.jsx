@@ -38,7 +38,9 @@ const ComparisonGraph = ({ percentile, data }) => {
           />
       </div>
         {/* Comparison Graph */}
-      <ResponsiveContainer width="100%" height={300} style={{ background: 'white'}}>
+      <ResponsiveContainer width="100%" height={300} style={{ background: 'white'}}> 
+        {/* XAxis maps the percentile values.
+            YAxis maps the number of students. */}
         <LineChart data={data}>
           <XAxis dataKey="percentile" label='' />
           <YAxis label='' />

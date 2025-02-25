@@ -25,7 +25,7 @@ const Sidebar = () => {
           <i className="fa-solid fa-chart-simple"></i>
           <p className='whitespace-nowrap'>Dashboard</p>
         </div>
-
+        {/* whitespace-nowrap--> to prevent wrapping in x axis */}
         <div
           className={`flex items-center gap-5 pl-6 pt-6 pb-6 cursor-pointer ${
             activeItem === 'skill-test' ? 'bg-customHover text-blue-600 rounded-tr-[4rem] rounded-br-[4rem]' : 'hover:bg-customHover hover:text-blue-600 hover:rounded-tr-[4rem] hover:rounded-br-[4rem]'

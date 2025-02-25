@@ -55,7 +55,8 @@ const page = () => {
           {/* First Column */}
           <div className='flex flex-col gap-5 md:w-full lg:w-[65%]'>
             {/* custom box for components */}
-            <Testbox>
+            <div className='flex flex-wrap gap-2 border-[1px] border-customBorder rounded-md iems-center justify-evenly p-6 w-full'>
+              <div className='flex flex-col '>
               <Image 
                 src="/images/HTML_5.png" 
                 alt='HTML5 icon' 
@@ -67,14 +68,16 @@ const page = () => {
                   <p className='font-bold xs:text-[16px]'>Hyper Text Markup Language</p>
                   <span className='text-customText xs:text-[12px]'>Questions: 08 | Duration: 15mins | Submitted on 5 June 2021</span>
               </div>
-              <button className='update px-6 py-2 text-white rounded-lg font-medium border-2 border-gray-800 xs:text-[12px]' onClick={handleOpenModal}>
+              </div>
+              <button className='update my-6 px-6 py-1 h-10 text-white rounded-lg font-medium border-2 border-gray-800 xs:text-[12px]' onClick={handleOpenModal}>
                   Update
               </button>
-            </Testbox>
+            </div>
+
             {/* custom box for components */}
-            <Testbox>
+            <div className='flex flex-wrap gap-2 border-[1px] border-customBorder rounded-md iems-center justify-evenly p-6 w-full'>
               <p className='font-bold min-w-full'>Quick Statistics</p>
-              <div className='flex flex-wrap min-w-full flex justify-start gap-2 items-center'>
+              <div className='flex flex-wrap min-w-full justify-start gap-2 items-center'>
                 <div className='flex gap-4 items-center'>
                   <Image 
                     src="/images/trophy.png" 
@@ -117,7 +120,7 @@ const page = () => {
                   </div>
                 </div>
               </div>
-            </Testbox>
+            </div>
             {/* Comparison Graph */}
             <ComparisonGraph
             percentile={percentile}
