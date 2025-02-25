@@ -1,25 +1,32 @@
-import Image from "next/image";
-import React from "react";
+import React from 'react'
+import Image from 'next/image';
 
+//Navbar Component
 const Navbar = () => {
   return (
-    <nav className="p-5 flex justify-between items-center border-b">
-      <div className="flex items-center gap-2">
-        <img className="w-10" src="/logo.png" alt="logo" />
-        <h2 className="text-xl font-medium">WhatBytes</h2>
-      </div>
-      <div className="flex flex-col  items-center justify-center lg:flex-row lg:border-2 lg:rounded-md lg:justify-start">
-        <div className="flex justify-center items-center lg:w-9 lg:h-9 lg:bg-[url('/blob2.svg')] lg:bg-cover">
-          <img
-            className="w-10 rounded-full aspect-square object-cover lg:w-5"
-            src="/profile.avif"
-            alt=""
+    <nav className='navbar border-b-[1px] border-customBorder flex justify-between p-4 min-w-full'>
+        <div className='flex items-center justify-center gap-2'>
+          <Image 
+          src="/images/whatbytes_icon.png" 
+          alt='whatbytes icon' 
+          width={40} 
+          height={40}
+          className='whatbytes-image'
           />
+          <h1 className='capitalise font-bold md:text-1xl lg:text-2xl'>WhatBytes</h1>
         </div>
-        <h3 className="px-1 font-semibold lg:text-sm">Rahil Siddique</h3>
-      </div>
-    </nav>
-  );
-};
+        <div className='flex items-center justify-center gap-2 border-2 border-customBorder p-1 rounded-md cursor-pointer'>
+          <Image 
+          src="/images/profile-pic.png" 
+          alt='profile picture' 
+          width={30} 
+          height={5}
+          className='profile-image'
+          />
+          <p className='capitalise font-bold'>Priyanshi Garg</p>
+        </div>
+      </nav>
+  )
+}
 
-export default Navbar;
+export default Navbar

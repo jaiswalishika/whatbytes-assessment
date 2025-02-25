@@ -1,54 +1,54 @@
-"use client";
-import React, { useState } from "react";
-import { MdOutlineBarChart } from "react-icons/md";
-import { TfiMedall } from "react-icons/tfi";
-import { IoDocumentOutline } from "react-icons/io5";
-import { IoIosClose } from "react-icons/io";
-import { CiMenuKebab } from "react-icons/ci";
+import React, { useState } from 'react';
+
+//sidebar component
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // State to keep track of the currently active item
+  const [activeItem, setActiveItem] = useState('skill-test');
+
+  // Function to handle item click and set the active item
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+  };
 
   return (
-    <div className="p-5 lg:p-0 lg:h-auto lg:w-[18vw] xl:w-[20vw] ">
-      <button className="lg:hidden bg-slate-100 shadow-md rounded-full p-2 lg:shadow-none lg:rounded-none" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <IoIosClose size={24}/> : <CiMenuKebab size={24} />}
-      </button>
-      <div className="relative h-full w-full ">
-      <div className={`flex transition-all duration-300 ease-in-out absolute ${isOpen ? "h-auto  top-0 bg-white" : "h-0"} lg:h-full
-        lg:w-full `}>
-        <aside
-          className={` w-64 border rounded-md shadow-xl transition-all duration-300 ease-in-out  ${
-            isOpen ? "block" : "hidden"
-          } lg:block lg:rounded-none lg:shadow-none lg:border-t-0 lg:border-r`}
+    <div className='sidebar-container border-r-[1px] border-customBorder min-h-full 
+      xs:w-12 xs:hover:w-40 sm:w-12 sm:hover:w-40 md:w-40 lg:w-60 lg:hover:w-60 
+      overflow-x-hidden transition-all duration-300 ease-in-out'>
+      
+      <div className='sidebar flex flex-col gap-2 font-medium text-[16px] pr-4'>
+        <div
+          className={`flex items-center gap-5 pl-6 pt-6 pb-6 cursor-pointer ${
+            activeItem === 'dashboard' ? 'bg-customHover text-blue-600 rounded-tr-[4rem] rounded-br-[4rem]' : 'hover:bg-customHover hover:text-blue-600 hover:rounded-tr-[4rem] hover:rounded-br-[4rem]'
+          }`}
+          onClick={() => handleItemClick('dashboard')}
         >
-          <nav className="mt-8 space-y-2 lg:space-y-4 lg:p-3">
-            <a
-              href="#"
-              className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200 rounded-full"
-            >
-              <MdOutlineBarChart size={20} />
-              <span className="ml-3 font-semibold">Dashboard</span>
-            </a>
-            <a
-              href="#"
-              className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200 rounded-full"
-            >
-              <TfiMedall size={20} />
-              <span className="ml-3 font-semibold">Skill Test</span>
-            </a>
-            <a
-              href="#"
-              className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200 rounded-full" 
-            >
-              <IoDocumentOutline size={20} />
-              <span className="ml-3 font-semibold">Internship</span>
-            </a>
-          </nav>
-        </aside>
-      </div>
+          <i className="fa-solid fa-chart-simple"></i>
+          <p className='whitespace-nowrap'>Dashboard</p>
+        </div>
+
+        <div
+          className={`flex items-center gap-5 pl-6 pt-6 pb-6 cursor-pointer ${
+            activeItem === 'skill-test' ? 'bg-customHover text-blue-600 rounded-tr-[4rem] rounded-br-[4rem]' : 'hover:bg-customHover hover:text-blue-600 hover:rounded-tr-[4rem] hover:rounded-br-[4rem]'
+          }`}
+          onClick={() => handleItemClick('skill-test')}
+        >
+          <i className="fa-solid fa-award"></i>
+          <p className='whitespace-nowrap'>Skill Test</p>
+        </div>
+
+        <div
+          className={`flex items-center gap-5 pl-6 pt-6 pb-6 cursor-pointer ${
+            activeItem === 'internship' ? 'bg-customHover text-blue-600 rounded-tr-[4rem] rounded-br-[4rem]' : 'hover:bg-customHover hover:text-blue-600 hover:rounded-tr-[4rem] hover:rounded-br-[4rem]'
+          }`}
+          onClick={() => handleItemClick('internship')}
+        >
+          <i className="fa-regular fa-file"></i>
+          <p className='whitespace-nowrap'>Internship</p>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Sidebar;
+

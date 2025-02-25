@@ -2,10 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+*{
+  margin: 0;
+}
+
+.main{
+  
+}
+.background{
+  background: #FEFEFE;  /* background color */
+}
+.navbar{
+  position: fixed;
+  z-index: 999;               /* set navbar position */
+  background: #FEFEFE;
+}
+.whatbytes-image{
+
+}
+.dartboard-image{
+  position: absolute;
+  bottom: 38%;               /* datboard image set at the center of the circular progress bar */
+  left: 2.5rem;
+}
+.profile-image{
+  border-radius: 100%;       /* profile picture border radius and height */
+  height: 27px;
+}
+.sidebar-container{
+  position: fixed;          /* positioning the sidebar */
+  left: 0;
+  z-index: 99;
+  background: white;
+}
+.sidebar{
+  margin-top: 8rem;      /* positioning the sidebar */
+}
+.update{
+  background: #132277; /* Custom color for update buttons */
+}
+.cancel{
+  color: #132277;
+  border: 1px solid #132277; /* Custom color for cancel buttons */
+}
+.quick-stats{
+  color: #A2A5AA; /* Custom color for texts */
+}
+.blue{
+  background: #3277F3; /* Custom color for progress bars */
+}
+.blue1{
+  background: #EAF2FE; /* Custom color for progress bars */
+}
+.orange{
+  background: #FF8038; /* Custom color for progress bars */
+}
+.orange1{
+  background: #FEF1EB; /* Custom color for progress bars */
+}
+.red{
+  background: #FA4F4F; /* Custom color for progress bars */
+}
+.red1{
+  background: #FFEBEC; /* Custom color for progress bars */
+}
+.green{
+  background: #28C064; /* Custom color for progress bars */
+}
+.green1{
+  background: #E6F9EF; /* Custom color for progress bars */
+}
+.update-scores{
+  position: fixed;   /* Positioning the update scores modal */
+  z-index: 9999;
+}
+.update-scores input {
+  -webkit-appearance: none;       /* remove default apperance on input buttons */
+  appearance: none; 
 }
